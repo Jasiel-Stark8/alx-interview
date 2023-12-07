@@ -3,6 +3,28 @@
 
 
 def canUnlockAll(boxes):
+    """
+    Determine if all lockboxes can be opened.
+
+    This method checks if all lockboxes can be opened given a list of lockboxes, \
+        where each lockbox contains keys to other lockboxes. \
+            The first lockbox (index 0) is always unlocked. \
+                The method iterates over the lockboxes using the keys obtained to \
+                    unlock as many additional lockboxes as possible.
+
+    Parameters:
+    boxes (list of list of int): A list where each element is a list of integers \
+        representing the keys contained in that lockbox.
+
+    Returns:
+    bool: True if all lockboxes can be unlocked using the keys available, False otherwise.
+
+    Example:
+    >>> canUnlockAll([[1], [2], [3], [4], []])
+    True
+    >>> canUnlockAll([[1, 4], [2], [0, 4, 1], [3], [], [4, 1], [5, 6]])
+    False
+    """
     # Start with the keys from the first box, which is unlocked
     keys = set(boxes[0])
     # The first box is always unlocked
