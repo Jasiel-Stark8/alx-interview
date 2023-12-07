@@ -13,7 +13,7 @@ def canUnlockAll(boxes):
         # Keep track of how many boxes we've unlocked in this iteration
         unlocked_this_round = set()
 
-        for key in keys:
+        for key in list(keys):  # Iterate over a copy of the keys
             if key < len(boxes) and key not in unlocked:
                 unlocked_this_round.add(key)
                 # Add new keys from the unlocked box
