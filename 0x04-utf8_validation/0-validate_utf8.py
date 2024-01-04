@@ -2,6 +2,7 @@
 """UTF-8 Validation"""
 from typing import List
 
+
 def validUTF8(data: List[int]) -> bool:
     """method"""
     try:
@@ -27,4 +28,3 @@ def validUTF8(data: List[int]) -> bool:
 
     except UnicodeDecodeError:
         return False
-
