@@ -5,7 +5,7 @@ from typing import List
 
 
 def validUTF8(data: List[int]) -> bool:
-    """method"""
+    """function to check validation"""
     try:
         count = 0
         for val in data:
